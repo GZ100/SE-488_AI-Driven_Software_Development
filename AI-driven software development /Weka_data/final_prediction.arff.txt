@@ -1,0 +1,25 @@
+@relation weather.symbolic_predicted
+
+@attribute outlook {sunny,overcast,rainy}
+@attribute temperature {hot,mild,cool}
+@attribute humidity {high,normal}
+@attribute windy {TRUE,FALSE}
+@attribute 'prediction margin' numeric
+@attribute 'predicted play' {yes,no}
+@attribute play {yes,no}
+
+@data
+sunny,hot,high,FALSE,-1,no,?
+sunny,hot,high,TRUE,-1,no,?
+overcast,hot,high,FALSE,1,yes,?
+rainy,mild,high,FALSE,1,yes,?
+rainy,cool,normal,FALSE,1,yes,?
+rainy,cool,normal,TRUE,-1,no,?
+overcast,cool,normal,TRUE,1,yes,?
+sunny,mild,high,FALSE,-1,no,?
+sunny,cool,normal,FALSE,1,yes,?
+rainy,mild,normal,FALSE,1,yes,?
+sunny,mild,normal,TRUE,1,yes,?
+overcast,mild,high,TRUE,1,yes,?
+overcast,hot,normal,FALSE,1,yes,?
+rainy,mild,high,TRUE,-1,no,?
